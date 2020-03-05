@@ -3,8 +3,6 @@ import json
 import re
 import random
 from pylab import *
-#baseline = json.load(open('baseline-results_val_49.json','r'))
-#channel = json.load(open('channel-results_val_50.json','r'))
 labels = json.load(open('something_v1_01.json','r'))
 baseline_save = open('baseline_f.txt','r')
 ground_truth = open('grundtruth_f.txt','r')
@@ -80,31 +78,6 @@ width = total_width / n
 for i in range(len(x)):
     x[i] = x[i] + width
 print(x)
-# plt.figure(figsize=(20, 8))
-# plt.bar(x,baseline_result,width=width,align="center",label = 'baseline',fc = 'r')
-# plt.xlim(-1, 20)
-# plt.ylim(0, 120)
-# my_x_ticks = np.arange(-1,20,1)
-# plt.xticks(my_x_ticks,fontsize=3, rotation=30)
-# my_y_ticks = np.arange(0,120,20)
-# plt.yticks(my_y_ticks)
-# font2 = {'family' : 'Times New Roman',
-# 'weight' : 'normal',
-# 'size'   : 10,
-# }
-# plt.xlabel('category',font2)
-# plt.ylabel('nums',font2)
-# for i in range(len(x)):
-#     x[i] = x[i] + width
-# plt.xticks(my_x_ticks+width*3,name_list)
-# plt.bar(x,channel_result,width=width,align="center",label = 'ctsr_relations',fc = 'b')
-# '''for i in range(len(x)):
-#     x[i] = x[i] + width
-# print(x)
-# plt.bar(x,ground_truth_result,width=width,label = 'ground_truth',tick_label = label_idx,fc = 'b')'''
-# plt.legend()
-# plt.savefig('results_ctsr.jpg',dpi=600)
-# plt.close()
 plt.figure(figsize=(15*1.2, 9*1.2))
 plt.xlim(0, 20)
 plt.ylim(0, 25.0001)
@@ -114,10 +87,6 @@ my_x_ticks = np.arange(0,20,1)
 #plt.xticks(x+width/2,name_list)
 my_y_ticks = np.arange(0,25.0001,5)
 plt.yticks(my_y_ticks,fontsize=18)
-font2 = {'family' : 'Times New Roman',
-'weight' : 'heavy',
-'size'   : 3,
-}
 font1 = {'family' : 'Times New Roman',
 'weight' : 'normal',
 'size'   : 25,
